@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTableRobots", "OpenTableRobots.csproj", "{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTableRobotsTest", "OpenTableRobotsTest\OpenTableRobotsTest.csproj", "{E40D00F7-9549-4F79-9B99-A270E6D12F40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,8 +15,40 @@ Global
 		{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}.Debug|x86.Build.0 = Debug|x86
 		{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}.Release|x86.ActiveCfg = Release|x86
 		{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}.Release|x86.Build.0 = Release|x86
+		{E40D00F7-9549-4F79-9B99-A270E6D12F40}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E40D00F7-9549-4F79-9B99-A270E6D12F40}.Debug|x86.Build.0 = Debug|Any CPU
+		{E40D00F7-9549-4F79-9B99-A270E6D12F40}.Release|x86.ActiveCfg = Release|Any CPU
+		{E40D00F7-9549-4F79-9B99-A270E6D12F40}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = OpenTableRobots.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.NamespaceBraceStyle = EndOfLine
+		$2.ClassBraceStyle = EndOfLine
+		$2.InterfaceBraceStyle = EndOfLine
+		$2.StructBraceStyle = EndOfLine
+		$2.EnumBraceStyle = EndOfLine
+		$2.MethodBraceStyle = EndOfLine
+		$2.ConstructorBraceStyle = EndOfLine
+		$2.DestructorBraceStyle = EndOfLine
+		$2.ElseIfNewLinePlacement = SameLine
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.BeforeIndexerDeclarationBracket = False
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.AfterDelegateDeclarationParameterComma = True
+		$2.NewParentheses = False
+		$2.SpacesBeforeBrackets = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.DotNetNamingPolicy = $3
+		$3.DirectoryNamespaceAssociation = None
+		$3.ResourceNamePolicy = FileFormatDefault
 	EndGlobalSection
 EndGlobal

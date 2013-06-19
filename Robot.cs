@@ -20,24 +20,17 @@ namespace OpenTableRobots {
         public int Y { get; private set; }
 
         public Robot(int x, int y, Direction facing) {
-            Facing = facing;
             X = x;
             Y = y;
+            Facing = facing;
 		}
 
         public void ExecuteCommand(string command, Grid grid) {
             switch (command) {
-            case "L":
-                Left();
-                break;
-            case "R":
-                Right();
-                break;
-            case "M":
-                Move(grid);
-                break;
-            default:
-                throw new ArgumentOutOfRangeException("Unknown command: " + command);
+                case "L": Left(); break;
+                case "R": Right(); break;
+                case "M": Move(grid); break;
+                default: throw new ArgumentOutOfRangeException("Unknown command: " + command);
             }
         }
 

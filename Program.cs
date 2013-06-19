@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using System.IO;
 
 namespace OpenTableRobots
 {
@@ -8,14 +10,17 @@ namespace OpenTableRobots
 	{
 		public static void Main (string[] args)
 		{
-            if (args.Length == 0) {
-                Console.WriteLine("Usage: battle <filePath>");
+            if (args.Length < 2) {
+                Console.WriteLine("Usage: battle <configFilePath> <outputFilePath>");
             } else {
+                // All Exceptions (IO and otherwise) are handled as one.
                 try {
-                    var filePath = args[0];
-                    Config config = ReadConfig(filePath);
+                    var configFilePath = args[0];
+                    var outputFilePath = args[1];
+
+                    Config config = ReadConfig(configFilePath);
                     List<Robot> results = new Battle(config).Run();
-                    WriteResults(results);
+                    WriteResults(outputFilePath, results);
                 }
                 catch (Exception e) {
                     // qq Does this actually provide good messages for all types of exception,
@@ -25,13 +30,18 @@ namespace OpenTableRobots
             }
 		}
 
-        private static Config ReadConfig(String filePath) {
-            string[] lines = System.IO.File.ReadAllLines(filePath, Encoding.UTF8);
+        private static Config ReadConfig(string filePath) {
+            string[] lines = File.ReadAllLines(filePath, Encoding.UTF8);
             return new ConfigParser().Parse(lines);
         }
 
-        private static void WriteResults(List<Robot> results) {
+        private static void WriteResults(string filePath, List<Robot> results) {
+            var outputLines = results.Select(robot => GenerateOutputLine(robot));
+            File.WriteAllLines(filePath, outputLines);
+        }
 
+        private static string GenerateOutputLine(Robot robot) {
+            return string.Format("{0} {1} {2}", robot.X, robot.Y, robot.Facing);
         }
 	}
 }

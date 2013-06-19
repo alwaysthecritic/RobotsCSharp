@@ -9,26 +9,53 @@ namespace OpenTableRobotsTest {
     public class Test {
 
         [Test]
-        public void BattleRunsCorrectly() {
-            var config = new Config(new Grid(5, 5),
-                                    new List<Mission> {
-                                        new Mission(new Robot(1, 2, Direction.N), "LMLMLMLMM"),
-                                        new Mission(new Robot(3, 3, Direction.E), "MMRMMRMRRM")
-                                    });
+        public void Battle1() {
+            var config = new Config(5, 5)
+                    .AddMission(1, 2, Direction.N, "LMLMLMLMM")
+                    .AddMission(3, 3, Direction.E, "MMRMMRMRRM");
 
             var battle = new Battle(config);
             var results = battle.Run();
 
             Assert.AreEqual(2, results.Count);
+            AssertRobot(results[0], 1, 3, Direction.N);
+            AssertRobot(results[1], 5, 1, Direction.E);
+        }
 
-            Assert.AreEqual(1, results[0].X);
-            Assert.AreEqual(3, results[0].Y);
-            Assert.AreEqual(Direction.N, results[0].Facing);
+        [Test]
+        public void Battle2() {
+            var config = new Config(3, 3)
+                    .AddMission(0, 0, Direction.E, "MMLMRMLMM")
+                    .AddMission(3, 3, Direction.S, "MRMRMLMLMMRRMLMRM");
 
+            var battle = new Battle(config);
+            var results = battle.Run();
 
-            Assert.AreEqual(5, results[1].X);
-            Assert.AreEqual(1, results[1].Y);
-            Assert.AreEqual(Direction.E, results[1].Facing);
+            Assert.AreEqual(2, results.Count);
+            AssertRobot(results[0], 3, 3, Direction.N);
+            AssertRobot(results[1], 0, 3, Direction.N);
+        }
+
+        [Test]
+        public void RobotCannotFallOffInAnyDirection() {
+            var config = new Config(1, 1)
+                    .AddMission(0, 0, Direction.N, "MMMM")
+                    .AddMission(0, 0, Direction.E, "MMMM")
+                    .AddMission(0, 0, Direction.S, "MMMM")
+                    .AddMission(0, 0, Direction.W, "MMMM");
+
+            var battle = new Battle(config);
+            var results = battle.Run();
+
+            Assert.AreEqual(4, results.Count);
+            AssertRobot(results[0], 0, 1, Direction.N);
+            AssertRobot(results[1], 1, 0, Direction.E);
+            AssertRobot(results[2], 0, 0, Direction.S);
+            AssertRobot(results[3], 0, 0, Direction.W);
+        }
+
+        private void AssertRobot(Robot robot, int x, int y, Direction facing) {
+            Assert.True(robot.X == x && robot.Y == y && robot.Facing == facing);
         }
     }
 }

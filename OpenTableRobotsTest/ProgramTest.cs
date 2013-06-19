@@ -16,7 +16,7 @@ namespace OpenTableRobotsTest {
             var configFilePath = "../../../SampleData/input.txt";
             var outputFilePath = "../../../SampleData/output.txt";
 
-            DeleteFile(outputFilePath);
+            File.Delete(outputFilePath);
 
             var args = new string[] { configFilePath,  outputFilePath };
             Program.Main(args);
@@ -26,10 +26,6 @@ namespace OpenTableRobotsTest {
             Assert.AreEqual(expectedOutput, output);
 
             // Clean up.
-            DeleteFile(outputFilePath);
-        }
-
-        private void DeleteFile(string outputFilePath) {
             File.Delete(outputFilePath);
         }
     }

@@ -55,7 +55,9 @@ namespace OpenTableRobotsTest {
         }
 
         private void AssertRobot(Robot robot, int x, int y, Direction facing) {
-            Assert.True(robot.X == x && robot.Y == y && robot.Facing == facing);
+            Assert.AreEqual(x, robot.X);
+            Assert.AreEqual(y, robot.Y);
+            Assert.AreEqual(facing, robot.Facing);
         }
     }
 }

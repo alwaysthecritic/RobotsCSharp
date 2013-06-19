@@ -34,6 +34,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BattleTest.cs" />
+    <Compile Include="ConfigParserTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\OpenTableRobots.csproj">
+      <Project>{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}</Project>
+      <Name>OpenTableRobots</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

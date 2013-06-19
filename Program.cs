@@ -6,7 +6,7 @@ using System.IO;
 
 namespace OpenTableRobots
 {
-	class Program
+	public class Program
 	{
 		public static void Main (string[] args)
 		{

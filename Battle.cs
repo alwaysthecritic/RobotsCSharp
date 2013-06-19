@@ -4,9 +4,12 @@ using System.Linq;
 
 namespace OpenTableRobots {
 
+    /// <summary>
+    /// Runs a full set of robot missions, given config describing the grid and those missions.
+    /// </summary>
     public class Battle {
 
-        readonly Config config;
+        private readonly Config config;
 
         public Battle(Config config) {
             this.config = config;
@@ -17,10 +20,13 @@ namespace OpenTableRobots {
         }
 
         private Robot RunMission(Mission mission) {
+            // We will run the commands with a copy of the mission's robot, so the original is untouched.
+            Robot robot = new Robot(mission.Robot);
+            // mission.Commands is a string where each character will be interpreted by the robot as a command.
             foreach (char c in mission.Commands) {
-                mission.Robot.ExecuteCommand(c.ToString(), config.Grid);
+                robot.ExecuteCommand(c.ToString(), config.Grid);
             }
-            return mission.Robot;
+            return robot;
         }
     }
 }

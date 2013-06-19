@@ -25,6 +25,12 @@ namespace OpenTableRobots {
             Facing = facing;
 		}
 
+        public Robot(Robot other) {
+            X = other.X;
+            Y = other.Y;
+            Facing = other.Facing;
+        }
+
         public void ExecuteCommand(string command, Grid grid) {
             switch (command) {
                 case "L": Left(); break;

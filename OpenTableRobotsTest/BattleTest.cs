@@ -37,6 +37,22 @@ namespace OpenTableRobotsTest {
         }
 
         [Test]
+        public void CanUseSameConfigTwice() {
+            var config = new Config(3, 3)
+                .AddMission(0, 0, Direction.E, "MMLMRMLMM")
+                    .AddMission(3, 3, Direction.S, "MRMRMLMLMMRRMLMRM");
+
+            // Use same config twice, expecting that it doesn't affect second run (config is not mutated).
+            new Battle(config).Run();
+            var battle = new Battle(config);
+            var results = battle.Run();
+
+            Assert.AreEqual(2, results.Count);
+            AssertRobot(results[0], 3, 3, Direction.N);
+            AssertRobot(results[1], 0, 3, Direction.N);
+        }
+
+        [Test]
         public void RobotCannotFallOffInAnyDirection() {
             var config = new Config(1, 1)
                     .AddMission(0, 0, Direction.N, "MMMM")

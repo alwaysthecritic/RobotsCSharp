@@ -11,7 +11,7 @@ namespace OpenTableRobots
 		public static void Main (string[] args)
 		{
             if (args.Length < 2) {
-                Console.WriteLine("Usage: battle <configFilePath> <outputFilePath>");
+                Console.WriteLine("Usage: OpenTableRobots.exe <configFilePath> <outputFilePath>");
             } else {
                 // All Exceptions (IO and otherwise) are handled as one.
                 try {

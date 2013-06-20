@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTableRobots", "OpenTableRobots.csproj", "{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robots", "Robots.csproj", "{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTableRobotsTest", "OpenTableRobotsTest\OpenTableRobotsTest.csproj", "{E40D00F7-9549-4F79-9B99-A270E6D12F40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotsTest", "RobotsTest\RobotsTest.csproj", "{E40D00F7-9549-4F79-9B99-A270E6D12F40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,7 +21,7 @@ Global
 		{E40D00F7-9549-4F79-9B99-A270E6D12F40}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = OpenTableRobots.csproj
+		StartupItem = Robots.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
 		$1.inheritsSet = null

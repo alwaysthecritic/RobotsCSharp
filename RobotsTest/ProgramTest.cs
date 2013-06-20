@@ -39,7 +39,7 @@ namespace OpenTableRobotsTest {
                 var args = new string[] { "foo" };
                 Program.Main(args);
 
-                var expectedConsoleOut = "Usage: OpenTableRobots.exe <configFilePath> <outputFilePath>" + NewLine;
+                var expectedConsoleOut = "Usage: Robots.exe <configFilePath> <outputFilePath>" + NewLine;
                 Assert.AreEqual(expectedConsoleOut, consoleOutput.GetOuput());
             }
         }
@@ -51,9 +51,10 @@ namespace OpenTableRobotsTest {
                 var args = new string[] { "foo", "bar" };
                 Program.Main(args);
 
+                // qq Handle cross-platform path separators?
                 // Message will show absolute file path so need to ignore the machine-specific bit
                 var prefix = "Could not find file \"/";
-                var suffix = "/OpenTableRobots/OpenTableRobotsTest/bin/Debug/foo\"." + NewLine;
+                var suffix = "/Robots/RobotsTest/bin/Debug/foo\"." + NewLine;
                 StringAssert.StartsWith(prefix, consoleOutput.GetOuput());
                 StringAssert.EndsWith(suffix, consoleOutput.GetOuput());
             }

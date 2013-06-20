@@ -39,7 +39,7 @@ namespace Robots {
         public void CanUseSameConfigTwice() {
             var config = new Config(3, 3)
                 .AddMission(0, 0, Direction.E, "MMLMRMLMM")
-                    .AddMission(3, 3, Direction.S, "MRMRMLMLMMRRMLMRM");
+                .AddMission(3, 3, Direction.S, "MRMRMLMLMMRRMLMRM");
 
             // Use same config twice, expecting that it doesn't affect second run (config is not mutated).
             new Battle(config).Run();

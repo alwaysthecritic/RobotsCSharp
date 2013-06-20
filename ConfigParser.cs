@@ -9,6 +9,14 @@ namespace Robots {
         public ConfigParsingException(string message) : base(message) {}
     }
 
+    /// <summary>
+    /// File format example, with comments that are not part of the actual file.
+    ///   5 5         -- Grid's max X and Y coords.
+    ///   1 2 N       -- First robot's start position and direction.
+    ///   LMLMLMLMM   -- First robot's list of commands.
+    ///   3 3 E       -- Same again for second robot. Repeat two lines per robot.
+    ///   MMRMMRMRRM  -- ...
+    /// </summary>
     public class ConfigParser {
 
         public const int MaxCommands = 10000;

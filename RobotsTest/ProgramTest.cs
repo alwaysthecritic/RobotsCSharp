@@ -50,7 +50,6 @@ namespace Robots {
                 var args = new string[] { "foo", "bar" };
                 Program.Main(args);
 
-                // qq Handle cross-platform path separators?
                 // Message will show absolute file path so need to ignore the machine-specific bit
                 var prefix = "Could not find file \"/";
                 var suffix = "/Robots/RobotsTest/bin/Debug/foo\"." + NewLine;

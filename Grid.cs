@@ -1,6 +1,6 @@
 using System;
 
-namespace OpenTableRobots {
+namespace Robots {
 
     public class Grid {
 

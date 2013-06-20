@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenTableRobots {
+namespace Robots {
 
     public class ConfigParsingException : Exception {
         public ConfigParsingException(string message) : base(message) {}

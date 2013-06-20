@@ -1,9 +1,8 @@
 using System;
 using NUnit.Framework;
-using OpenTableRobots;
 using System.Collections.Generic;
 
-namespace OpenTableRobotsTest {
+namespace Robots {
 
     [TestFixture]
     public class ConfigParserTest {

@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E40D00F7-9549-4F79-9B99-A270E6D12F40}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>OpenTableRobotsTest</RootNamespace>
-    <AssemblyName>OpenTableRobotsTest</AssemblyName>
+    <RootNamespace>Robots</RootNamespace>
+    <AssemblyName>RobotsTest</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

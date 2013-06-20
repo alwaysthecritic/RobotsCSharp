@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace OpenTableRobots {
+namespace Robots {
 
     /// <summary>
     /// Config for a battle, with a simple 'builder' style API to make it easy to create

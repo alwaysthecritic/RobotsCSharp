@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenTableRobots {
+namespace Robots {
 
 	public class Robot {
 

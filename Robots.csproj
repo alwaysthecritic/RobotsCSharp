@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4412CFAC-D7D5-448C-825D-44F9DB8E5CB9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OpenTableRobots</RootNamespace>
+    <RootNamespace>Robots</RootNamespace>
     <AssemblyName>Robots</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">

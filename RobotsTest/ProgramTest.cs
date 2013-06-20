@@ -1,10 +1,9 @@
 using System;
 using NUnit.Framework;
-using OpenTableRobots;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace OpenTableRobotsTest {
+namespace Robots {
 
     /// <summary>
     /// Functional tests that exercises the whole program.

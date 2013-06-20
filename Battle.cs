@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenTableRobots {
+namespace Robots {
 
     /// <summary>
     /// Runs a full set of robot missions, given config describing the grid and those missions.

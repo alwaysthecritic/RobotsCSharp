@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace OpenTableRobotsTest {
+namespace Robots{
 
     // From http://stackoverflow.com/questions/2139274/grabbing-the-output-sent-to-console-out-from-within-a-unit-test
     public class ConsoleOutput : IDisposable

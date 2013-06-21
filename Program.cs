@@ -9,7 +9,6 @@ namespace Robots
 	public class Program
 	{
         /// <summary>
-        /// The entry point of the program, where the program control starts and ends.
         /// In the best traditions of UNIX command line apps, outputs nothing if successful.
         /// </summary>
 		public static void Main (string[] args)

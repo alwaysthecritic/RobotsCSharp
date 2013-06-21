@@ -10,7 +10,7 @@ namespace Robots {
     }
 
     /// <summary>
-    /// File format example, with comments that are not part of the actual file.
+    /// File format example (with comments that are not part of the actual file).
     ///   5 5         -- Grid's max X and Y coords.
     ///   1 2 N       -- First robot's start position and direction.
     ///   LMLMLMLMM   -- First robot's list of commands.

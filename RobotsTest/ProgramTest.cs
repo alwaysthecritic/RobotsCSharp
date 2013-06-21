@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace Robots {
 
     /// <summary>
-    /// Functional tests that exercises the whole program.
+    /// Functional tests that exercise the whole program.
     /// </summary>
     [TestFixture]
     public class ProgramTest {
@@ -27,7 +27,6 @@ namespace Robots {
             var expectedOutput = "1 3 N" + NewLine + "5 1 E" + NewLine;
             Assert.AreEqual(expectedOutput, output);
 
-            // Clean up.
             File.Delete(outputFilePath);
         }
 
